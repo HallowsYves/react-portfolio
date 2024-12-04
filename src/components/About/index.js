@@ -1,14 +1,28 @@
 import './index.scss'
 import AnimatedLetters from "../AnimatedLetters"
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAws, faCss3, faGit, faGitAlt, faHtml5, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
 
 const About = () => {
+    const [letterClass, setLetterClass] = useState('text-animate');
+    useEffect(() => {
+        setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000)
+    }, [])
+
+
+
+
     return (
         <div className="container about-page">
             <div className="text-zone">
                 <h1>
                     <AnimatedLetters
+                        letterClass={letterClass}
                         stringArray={['A','b','o','u','t', ' ', 'm','e','!']}
-                        index={16}
+                        index={9}
                     />
                 </h1>
                 <p>
@@ -30,6 +44,33 @@ const About = () => {
                 </p>
             </div>
 
+            <div className='stage-cube-cont'>
+                <div className='cubespinner'>
+                    <div className='face1'>
+                        <FontAwesomeIcon icon={faPython} color='#FFF'/>
+                    </div>
+
+                    <div className='face2'>
+                        <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+                    </div>
+
+                    <div className='face3'>
+                        <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+                    </div>
+
+                    <div className='face4'>
+                        <FontAwesomeIcon icon={faReact} color="#28A4D9" />
+                    </div>
+
+                    <div className='face5'>
+                        <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+                    </div>
+
+                    <div className='face6'>
+                        <FontAwesomeIcon icon={faAws} color="#232f3e" />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
