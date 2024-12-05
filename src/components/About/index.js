@@ -2,7 +2,8 @@ import './index.scss'
 import AnimatedLetters from "../AnimatedLetters"
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAws, faCss3, faGit, faGitAlt, faHtml5, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faAws, faCss3,faGitAlt, faHtml5, faPython, faReact } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -42,6 +43,14 @@ const About = () => {
                     I play the electric guitar and bass guitar, and I’m currently learning to play the piano. 
                     Music is my passion and a source of inspiration that fuels my drive in all areas of life 
                 </p>
+                <a
+                    href='/Velasquez_Vega_Yves_Resume.pdf'
+                    download='Yves_Velasquez_Vega_Resume.pdf'
+                    className='flat-button'
+                >
+                    RESUME
+                </a>
+
             </div>
 
             <div className='stage-cube-cont'>

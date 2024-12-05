@@ -1,8 +1,11 @@
+/*
 import './index.scss';
 import LogoH from '../../../assets/images/logo-h.png';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap-trial';
 import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+
+
 const Logo = () => {
     const bgRef = useRef()
     const outlineLogoRef = useRef()
@@ -59,3 +62,4 @@ const Logo = () => {
     }
     
 export default Logo
+*/

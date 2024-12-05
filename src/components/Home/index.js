@@ -7,7 +7,7 @@ import AnimatedLetters from '../AnimatedLetters'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
-    const nameArray = ['a', 'l', 'l','o','w', 's', 'y','v','e','s']
+    const nameArray = ['Y','v','e','s', ' ', 'V','e','l','a','s','q','u','e','z']
     const jobArray = ['s','o','f','t','w','a','r','e',' ', 'd','e','v','e','l','o','p','e','r']
 
     useEffect(() => {
@@ -25,7 +25,8 @@ const Home = () => {
                 <br />
                 <span className={`${letterClass} _13`}>I</span>
                 <span className={`${letterClass} _14`}>'m</span>
-                <img src={LogoSubtitle} alt="software developer" />
+                <span className={`${letterClass} _15`}>   </span>
+
                 <AnimatedLetters letterClass={letterClass}
                 stringArray={nameArray}
                 index={15} />
@@ -34,10 +35,9 @@ const Home = () => {
                 stringArray={jobArray}
                 index={22} />
                 </h1>
-                <h2> Student, Developer, Musician</h2>
+                <h2> Student(885719716), Developer, Musician</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>
-            <Logo />
         </div>
     )
 }
